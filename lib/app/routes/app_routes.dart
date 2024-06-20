@@ -6,11 +6,11 @@ abstract class Routes {
 
   // ignore: constant_identifier_names
   static const HOME = _Paths.HOME;
-  static const ACCOUNT = _Paths.ACCOUNT;
+  static const CART = _Paths.CART;
 }
 
 abstract class _Paths {
   // ignore: constant_identifier_names
   static const HOME = '/home';
-  static const ACCOUNT = '/account';
+  static const CART = '/cart';
 }

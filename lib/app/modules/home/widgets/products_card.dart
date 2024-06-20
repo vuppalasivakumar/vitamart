@@ -25,12 +25,15 @@ class ProductsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            productsText,
-            style: Theme.of(context)
-                .textTheme
-                .titleMedium
-                ?.copyWith(fontSize: 20.0, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.all(AppSizes.x1_00),
+            child: Text(
+              productsText,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(fontSize: 20.0, fontWeight: FontWeight.bold),
+            ),
           ),
           GridView.builder(
             itemCount: itemCount,

@@ -32,7 +32,7 @@ class AccountView extends GetView<AccountController> {
                     children: [
                    const Text("Log in to get exclusive offers"),
                     const SizedBox(width: 80,),
-                     ElevatedButton(onPressed: (){},style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(AppColors.primaryColor)), child: const Text("LogIn",style: TextStyle(color:AppColors.white),),)
+                     ElevatedButton(onPressed: (){},style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(AppColors.lightblue)), child: const Text("LogIn",style: TextStyle(color:AppColors.balck),),)
                    ],
                    ),
                 ),
@@ -45,7 +45,7 @@ class AccountView extends GetView<AccountController> {
                    child: Text("Credit Score",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20 ),),
                  ),
                  ListTile(
-          leading: const Icon(Icons.description_outlined,color:AppColors.primaryColor,),
+          leading: const Icon(Icons.description_outlined,color:AppColors.green,),
           title: const Text("Free credit score check"),
           subtitle: const Text("Get detailed credit report instantly"),
           trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
@@ -61,7 +61,7 @@ class AccountView extends GetView<AccountController> {
                    child: Text("Notifications",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20 ),),
                  ),
                  ListTile(
-          leading: const Icon(Icons.notifications_none_outlined,color:AppColors.primaryColor),
+          leading: const Icon(Icons.notifications_none_outlined,color:AppColors.lightblue),
           title: const Text("Tap for latest updates and offers"),
          
           trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
@@ -99,17 +99,17 @@ class AccountView extends GetView<AccountController> {
                      child: Text("Account Settings",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20 )),
                    ),
                     ListTile(
-                      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.translate_outlined,color: AppColors.primaryColor,)),
+                      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.translate_outlined,color: AppColors.lightblue,)),
                       title:const  Text("Select Language"),
                       trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
                     ),
                      ListTile(
-                      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.notification_add_outlined,color: AppColors.primaryColor,)),
+                      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.notification_add_outlined,color: AppColors.lightblue,)),
                       title:const  Text("Notification Settings"),
                       trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
                     ),
                      ListTile(
-                      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.headphones_outlined,color: AppColors.primaryColor,)),
+                      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.headphones_outlined,color: AppColors.lightblue,)),
                       title:const  Text("Help Center"),
                       trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
                     )
@@ -178,7 +178,7 @@ class AccountView extends GetView<AccountController> {
                      ),
                     
                     ListTile(
-                      leading: IconButton(onPressed: (){}, icon:const Icon(Icons.store_outlined,color: AppColors.primaryColor,)),
+                      leading: IconButton(onPressed: (){}, icon:const Icon(Icons.store_outlined,color: AppColors.lightblue,)),
                       title: const Text("Sell on Vitamart"),
                       trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
                     )
@@ -192,12 +192,12 @@ class AccountView extends GetView<AccountController> {
                       child: Text("Feedback & Information",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20 )),
                     ),
                     ListTile(
-                      leading: IconButton(onPressed: (){}, icon:const Icon(Icons.description_outlined,color: AppColors.primaryColor,)),
+                      leading: IconButton(onPressed: (){}, icon:const Icon(Icons.description_outlined,color: AppColors.lightblue,)),
                       title: const Text("Terms,Policies and Licenses"),
                       trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
                     ),
                      ListTile(
-                      leading: IconButton(onPressed: (){}, icon:const Icon(Icons.question_mark_outlined,color: AppColors.primaryColor,)),
+                      leading: IconButton(onPressed: (){}, icon:const Icon(Icons.question_mark_outlined,color: AppColors.lightblue,)),
                       title: const Text("Browser FAQs"),
                       trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_right_outlined)),
                     )
