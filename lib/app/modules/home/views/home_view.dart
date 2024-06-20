@@ -16,8 +16,9 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: AppColors.ash,
+          backgroundColor: AppColors.whitecolor,
           toolbarHeight: 100,
+          // elevation: 6,
           leadingWidth: 50,
           leading: Image.asset(
             "assets/vitamart_logo.jpg",
@@ -27,18 +28,6 @@ class HomeView extends GetView<HomeController> {
           title: const TextField(
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.search),
-              suffixIcon: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(
-                    Icons.mic,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(AppSizes.x1_00),
-                    child: Icon(Icons.camera_alt_outlined),
-                  ),
-                ],
-              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 gapPadding: 2.0,
