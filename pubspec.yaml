@@ -10,6 +10,7 @@ dependencies:
   get: 4.6.6
   flutter: 
     sdk: flutter
+  carousel_slider: ^4.2.1
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
@@ -18,4 +19,11 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
-
+  assets:
+    - assets/vitamart_logo.jpg
+    - assets/vitamart_title_logo.avif
+    - assets/vitamart_title_logo.jpg
+    - assets/diwali.png
+    - assets/banner_logo.png
+    - assets/vitamart_productsimg.jpg
+    
