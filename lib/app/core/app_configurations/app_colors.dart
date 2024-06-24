@@ -14,5 +14,5 @@ class AppColors {
   static const bannercolor = Color(0xfffddce3);
   static const lightgold = Color(0xffcea394);
   static const whitecolor = Color(0xffffffff);
-  
+  static const lightskyblue = Color(0xff40c4ff);
 }
