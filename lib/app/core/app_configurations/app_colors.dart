@@ -12,6 +12,8 @@ class AppColors {
   static const lavender = Color(0xfff1bdf7);
   static const skyblue = Color(0xffdff8fd);
   static const bannercolor = Color(0xfffddce3);
-  static const lightgold = Color(0xffcea394);
+  static const lightgold = Color(0xffFB641B);
   static const whitecolor = Color(0xffffffff);
+    static const successgreen = Color(0xff2baf3b);
+
 }
