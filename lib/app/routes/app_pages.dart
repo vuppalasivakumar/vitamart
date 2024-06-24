@@ -23,7 +23,6 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.EXPLORE,
-      // ignore: prefer_const_constructors
       page: () => ExploreView(),
       binding: ExploreBinding(),
     ),
