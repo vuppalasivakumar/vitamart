@@ -1,3 +1,4 @@
+
 import 'package:get/get.dart';
 
 import 'package:vitamart/app/modules/cart/bindings/cart_binding.dart';
@@ -10,12 +11,12 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.CART;
 
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
