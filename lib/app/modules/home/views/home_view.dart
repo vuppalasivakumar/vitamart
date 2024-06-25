@@ -1,12 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:vitamart/app/core/app_configurations/app_assets.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
+import 'package:vitamart/app/core/app_configurations/app_networkurls.dart';
 import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
-import 'package:vitamart/app/core/app_configurations/app_urls.dart';
 import 'package:vitamart/app/modules/home/widgets/products_card.dart';
+import 'package:vitamart/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -24,9 +26,7 @@ class HomeView extends GetView<HomeController> {
           leading: Padding(
             padding: const EdgeInsets.only(left: AppSizes.x0_75),
             child: Image.asset(
-              "assets/vitamart_title_logo.png",
-              // height: 50.00,
-              // width: 70.00,
+              AppAssets.vitamartTitleLogo,
             ),
           ),
           title: const TextField(
@@ -47,7 +47,9 @@ class HomeView extends GetView<HomeController> {
                 Icons.person_outline_rounded,
               ),
               iconSize: 35,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.CART);
+              },
               tooltip: "Login here",
             ),
             const SizedBox(
@@ -58,9 +60,6 @@ class HomeView extends GetView<HomeController> {
         body: Obx(() => SingleChildScrollView(
               child: Column(
                 children: [
-                  // SizedBox(
-                  //   child: Image.asset("assets/vitamart_productsimg.jpg", fit: BoxFit.cover, cacheHeight: 85, cacheWidth: 440,),
-                  // ),
                   Padding(
                     padding: const EdgeInsets.all(AppSizes.x0_50),
                     child: Card(
@@ -82,7 +81,7 @@ class HomeView extends GetView<HomeController> {
                             ),
                             subtitle:
                                 const Text("Offer Expires Soon Order Now"),
-                            trailing: Image.network(Appurl.ordernow),
+                            trailing: Image.network(AppNetworkurls.ordernow),
                           )
                         ],
                       ),
@@ -94,40 +93,33 @@ class HomeView extends GetView<HomeController> {
                   CarouselSlider(
                     items: [
                       Container(
-                        // margin: const EdgeInsets.all(AppSizes.x1_00),
                         decoration: const BoxDecoration(
-                          // color: AppColors.black
                           image: DecorationImage(
-                            image: NetworkImage(Appurl.carouselMobileimg),
+                            image: NetworkImage(AppNetworkurls.carouselMobileimg),
                             fit: BoxFit.cover,
                           ),
-                          // borderRadius: BorderRadius.circular(25),
                         ),
                       ),
                       Container(
-                        // margin:const EdgeInsets.all(AppSizes.x1_00),
                         decoration: const BoxDecoration(
-                          // color: AppColors.black
                           image: DecorationImage(
-                            image: NetworkImage(Appurl.carouselmobilesaleimg),
+                            image: NetworkImage(AppNetworkurls.carouselmobilesaleimg),
                             fit: BoxFit.cover,
                           ),
-                          // borderRadius: BorderRadius.circular(25),
                         ),
                       ),
                       Container(
-                        // margin:const EdgeInsets.all(AppSizes.x1_00),
                         decoration: const BoxDecoration(
-                          // color: AppColors.black
                           image: DecorationImage(
-                            image: NetworkImage(Appurl.carouselLaptopsaleimg),
+                            image: NetworkImage(AppNetworkurls.carouselLaptopsaleimg),
                             fit: BoxFit.cover,
                           ),
-                          // borderRadius: BorderRadius.circular(25),
                         ),
                       ),
                       SizedBox(
-                        child: Image.asset('assets/vitamart_productsimg.jpg'),
+                        child: Image.asset(
+                          AppAssets.vitamartProductsimg,
+                        ),
                       ),
                     ],
                     options: CarouselOptions(
@@ -152,13 +144,6 @@ class HomeView extends GetView<HomeController> {
                         itemCount: controller.electronicsDetails.length,
                         productsDetails: controller.electronicsDetails),
                   ),
-                  // SizedBox(
-                  //   child: ProductsCard(
-                  //       productsText: "Electronics:",
-                  //       color: AppColors.skyblue,
-                  //       itemCount: controller.electronicsDetails.length,
-                  //       productsDetails: controller.electronicsDetails),
-                  // ),
                   const SizedBox(
                     height: 10,
                   ),
@@ -172,13 +157,13 @@ class HomeView extends GetView<HomeController> {
                   ),
                   ProductsCard(
                       productsText: 'Grocery:',
-                      color: AppColors.lightgold,
+                      color: AppColors.paleSilver,
                       itemCount: controller.groceryDetails.length,
                       productsDetails: controller.groceryDetails),
-
                   const SizedBox(
                     height: 30,
                   ),
+                  // ignore: avoid_unnecessary_containers
                   Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -192,17 +177,18 @@ class HomeView extends GetView<HomeController> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 22),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: AppSizes.x2_75),
                           child: SizedBox(
-                            height: 150, // Adjust this height as needed
+                            height: 150,
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemCount: controller.menuItems.length,
                               itemBuilder: (context, index) {
                                 return Container(
-                                  width: 120, // Adjust the width as needed
-                                  margin:
-                                      const EdgeInsets.symmetric(horizontal: 8),
+                                  width: 120,
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: AppSizes.x1_00),
                                   child: Column(
                                     children: [
                                       Expanded(
@@ -219,7 +205,7 @@ class HomeView extends GetView<HomeController> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(height: 8),
+                                      const SizedBox(height: 8),
                                       Text(
                                         controller.menuItems[index]["title"]!,
                                         style: const TextStyle(

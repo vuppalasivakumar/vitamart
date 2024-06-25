@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  
+
   List<Map<String, String>> electronicsDetails = [
     {
       "prdUrl":
@@ -22,21 +24,21 @@ class HomeController extends GetxController {
     },
     {
       "prdUrl":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjWFDthQt4osExG3cA4F7bIkcrRxUnzPKMCA&s",
-      "prdName": "Dell Laptop",
+          "https://m.media-amazon.com/images/I/31IhYwtLhPL._SX300_SY300_QL70_FMwebp_.jpg",
+      "prdName": "Apple Watch SE",
       "prdPrice": "\u{20B9}${56299}"
     },
   ].obs;
   List<Map<String, String>> fashionDetails = [
     {
       "prdUrl":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNBEd_N0JMalYRXWWzGrR3GzHyXqyu_A9Dkg&s",
+          "https://media.istockphoto.com/id/935032524/photo/women-summer-dresses-on-display-at-camden-market.jpg?s=612x612&w=0&k=20&c=_L2DC3Fq4wST3v9fsonpJzARWpMibAVtWUkZXPrQALs=",
       "prdName": "Womens Clothing",
       "prdPrice": "\u{20B9}${599}",
     },
     {
       "prdUrl":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnP11pzE3Hc_BnRJaRocI2h2QYwVVVRAEbw&s",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQRJNL-NnOSx8WRiwkpEWdtjVlrAylfkHs4w&s",
       "prdName": "Mens Clothing",
       "prdPrice": "\u{20B9}${399}",
     },

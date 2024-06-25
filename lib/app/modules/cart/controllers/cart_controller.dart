@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:vitamart/app/modules/cart/model/cart_model.dart';
+import 'package:vitamart/app/modules/cart/models/cart_model.dart';
 
 class CartController extends GetxController {
   var cartItems = <Product, int>{}.obs;
