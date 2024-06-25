@@ -2,7 +2,7 @@
 
 import 'package:get/get.dart';
 
-class CartController extends GetxController {
+class LoginController extends GetxController {
   
 
   final count = 0.obs;

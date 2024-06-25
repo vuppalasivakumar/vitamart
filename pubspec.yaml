@@ -21,9 +21,14 @@ flutter:
   uses-material-design: true
   assets:
     - assets/vitamart_logo.jpg
+    - assets/vitamart_title_logo.png
     - assets/vitamart_title_logo.avif
     - assets/vitamart_title_logo.jpg
     - assets/diwali.png
     - assets/banner_logo.png
     - assets/vitamart_productsimg.jpg
+    - assets/avarthar1.webp
+    - assets/avathar3.jpg
+    - assets/loginimg.jpg
+  
     
