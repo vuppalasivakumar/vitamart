@@ -17,6 +17,8 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    // final colorScheme = Theme.of(context).colorScheme;
+    // final textTheme = Theme.of(context).textTheme;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.whitecolor,
@@ -34,7 +36,7 @@ class HomeView extends GetView<HomeController> {
               prefixIcon: Icon(Icons.search),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                gapPadding: 2.0,
+                gapPadding: AppSizes.x0_25,
               ),
               labelText: 'Enter here',
               hintText: 'Enter here',
@@ -168,12 +170,16 @@ class HomeView extends GetView<HomeController> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Padding(
-                          padding: EdgeInsets.all(AppSizes.x2_00),
+                         Padding(
+                          padding: const EdgeInsets.all(AppSizes.x2_00),
                           child: Text(
                             "SHOP NOW FOR YOUR FAVOURITES",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                            style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold,),
                           ),
                         ),
                         Padding(
@@ -208,8 +214,11 @@ class HomeView extends GetView<HomeController> {
                                       const SizedBox(height: 8),
                                       Text(
                                         controller.menuItems[index]["title"]!,
-                                        style: const TextStyle(
-                                            fontWeight: FontWeight.bold),
+                                        style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(
+                                      fontWeight: FontWeight.bold,),
                                         textAlign: TextAlign.center,
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
@@ -229,6 +238,8 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ],
               ),
-            )));
+            )
+            )
+            );
   }
 }
