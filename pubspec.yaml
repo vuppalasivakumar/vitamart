@@ -27,11 +27,11 @@ flutter:
     - assets/diwali.png
     - assets/banner_logo.png
     - assets/vitamart_productsimg.jpg
-    - assets/fashion_women.png
-    - assets/fashion.png
-    - assets/mobiles.png
-    - assets/Appliances.png 
+    - assets/fashion1.png
+    - assets/mobiles.png 
     - assets/furniture.png
-    - assets/furniture1.png
+    - assets/grocery.png
+    - assets/grocery1.png
+    - assets/electronics.png
 
     

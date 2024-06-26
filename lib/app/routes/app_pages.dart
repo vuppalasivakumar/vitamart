@@ -13,7 +13,7 @@ class AppPages {
   AppPages._();
 
   // ignore: constant_identifier_names
-  static const INITIAL = Routes.EXPLORE;
+  static const INITIAL = Routes.CATEGORIES;
 
   static final routes = [
     GetPage(
@@ -23,7 +23,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.EXPLORE,
-      page: () => ExploreView(),
+      page: () =>const ExploreView(),
       binding: ExploreBinding(),
     ),
     GetPage(
