@@ -97,7 +97,8 @@ class HomeView extends GetView<HomeController> {
                       Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(AppNetworkurls.carouselMobileimg),
+                            image:
+                                NetworkImage(AppNetworkurls.carouselMobileimg),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -105,7 +106,8 @@ class HomeView extends GetView<HomeController> {
                       Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(AppNetworkurls.carouselmobilesaleimg),
+                            image: NetworkImage(
+                                AppNetworkurls.carouselmobilesaleimg),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -113,7 +115,8 @@ class HomeView extends GetView<HomeController> {
                       Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(AppNetworkurls.carouselLaptopsaleimg),
+                            image: NetworkImage(
+                                AppNetworkurls.carouselLaptopsaleimg),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -170,16 +173,17 @@ class HomeView extends GetView<HomeController> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                         Padding(
+                        Padding(
                           padding: const EdgeInsets.all(AppSizes.x2_00),
                           child: Text(
                             "SHOP NOW FOR YOUR FAVOURITES",
                             style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
-                                  ?.copyWith(
-                                      fontSize: 20.0,
-                                      fontWeight: FontWeight.bold,),
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
                         ),
                         Padding(
@@ -215,10 +219,11 @@ class HomeView extends GetView<HomeController> {
                                       Text(
                                         controller.menuItems[index]["title"]!,
                                         style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
-                                  ?.copyWith(
-                                      fontWeight: FontWeight.bold,),
+                                            .textTheme
+                                            .titleMedium
+                                            ?.copyWith(
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                         textAlign: TextAlign.center,
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
@@ -238,8 +243,6 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ],
               ),
-            )
-            )
-            );
+            )));
   }
 }
