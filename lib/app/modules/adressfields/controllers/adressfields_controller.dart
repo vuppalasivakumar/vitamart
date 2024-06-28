@@ -2,8 +2,7 @@
 
 import 'package:get/get.dart';
 
-class CartController extends GetxController {
-  
+class AdressfieldsController extends GetxController {
 
   final count = 0.obs;
   @override

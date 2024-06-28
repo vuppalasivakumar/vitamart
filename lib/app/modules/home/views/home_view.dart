@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
 import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
 import 'package:vitamart/app/core/app_configurations/app_urls.dart';
-import 'package:vitamart/app/modules/home/widgets/products_card.dart';
+// import 'package:vitamart/app/modules/home/widgets/products_card.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -144,23 +144,23 @@ class HomeView extends GetView<HomeController> {
               const SizedBox(
                 height: 10,
               ),
-              ProductsCard(
-                  productsText: "Electronics:",
-                  color: AppColors.skyblue,
-                  itemCount: controller.electronicsDetails.length,
-                  productsDetails: controller.electronicsDetails),
-              const SizedBox(height: 10,),    
-              ProductsCard(
-                  productsText: "Fashions:",
-                  color: AppColors.ash,
-                  itemCount: controller.fashionDetails.length,
-                  productsDetails: controller.fashionDetails),
-              const SizedBox(height: 10,),       
-              ProductsCard(productsText: 'Grocery:',
-                   color: AppColors.lightgold, 
-                   itemCount: controller.groceryDetails.length,
-                   productsDetails: controller.groceryDetails), 
-              const SizedBox(height: 20,),           
+              // ProductsCard(
+              //     productsText: "Electronics:",
+              //     color: AppColors.skyblue,
+              //     // itemCount: controller.electronicsDetails.length,
+              //     productsDetails: controller.electronicsDetails),
+              // const SizedBox(height: 10,),    
+              // ProductsCard(
+              //     productsText: "Fashions:",
+              //     color: AppColors.ash,
+              //     itemCount: controller.fashionDetails.length,
+              //     productsDetails: controller.fashionDetails),
+              // const SizedBox(height: 10,),       
+              // ProductsCard(productsText: 'Grocery:',
+              //      color: AppColors.lightgold, 
+              //      itemCount: controller.groceryDetails.length,
+              //      productsDetails: controller.groceryDetails), 
+              // const SizedBox(height: 20,),           
             ],
           ),
         )
