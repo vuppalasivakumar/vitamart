@@ -38,7 +38,7 @@ class SignupView extends GetView<SignupController> {
                 style: Theme.of(context)
                     .textTheme
                     .titleSmall
-                    ?.copyWith(fontWeight: FontWeight.bold, fontSize: 40),
+                    ?.copyWith(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               const SizedBox(
                 height: 40,
@@ -62,12 +62,16 @@ class SignupView extends GetView<SignupController> {
               ),
               TextField(
                 controller: password,
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
+         obscureText: true,
                 decoration: InputDecoration(
-                  prefixIcon: const Icon(Icons.password),
+                  prefixIcon: const Icon(Icons.remove_red_eye_outlined),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30)),
                   labelText: "enter your password",
+                  hintText: "******",
+                  
+                  
                   labelStyle: Theme.of(context)
                       .textTheme
                       .titleSmall
