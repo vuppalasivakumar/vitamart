@@ -17,6 +17,7 @@ dev_dependencies:
   flutter_test: 
     sdk: flutter
 
+
 flutter: 
   uses-material-design: true
   assets:
@@ -26,4 +27,11 @@ flutter:
     - assets/diwali.png
     - assets/banner_logo.png
     - assets/vitamart_productsimg.jpg
+    - assets/fashion1.png
+    - assets/mobiles.png 
+    - assets/furniture.png
+    - assets/grocery.png
+    - assets/grocery1.png
+    - assets/electronics.png
+
     

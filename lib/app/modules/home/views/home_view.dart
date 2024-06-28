@@ -49,13 +49,14 @@ class HomeView extends GetView<HomeController> {
           ),
           actions: [
             IconButton(
-             icon: const Icon(Icons.person_outline_rounded,),
-             iconSize: 35,
-             onPressed:(){
-             },
-             tooltip: "Login here",
+              icon: const Icon(
+                Icons.person_outline_rounded,
+              ),
+              iconSize: 35,
+              onPressed: () {},
+              tooltip: "Login here",
             ),
-           const SizedBox(
+            const SizedBox(
               width: 20,
             ),
           ],
@@ -75,13 +76,16 @@ class HomeView extends GetView<HomeController> {
                     children: [
                       ListTile(
                         contentPadding: const EdgeInsets.all(AppSizes.x1_00),
-                        title: Text("50% OFF",style: Theme.of(context)
-                                     .textTheme
-                                    .titleLarge
-                                    ?.copyWith(fontSize: 20.0, fontWeight: FontWeight.bold),
-                                    ),
+                        title: Text(
+                          "50% OFF",
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
+                              ?.copyWith(
+                                  fontSize: 20.0, fontWeight: FontWeight.bold),
+                        ),
                         subtitle: const Text("Offer Expires Soon Order Now"),
-                        trailing: Image.network(Appurl.ordernow),            
+                        trailing: Image.network(Appurl.ordernow),
                       )
                     ],
                   ),
@@ -149,21 +153,27 @@ class HomeView extends GetView<HomeController> {
                   color: AppColors.skyblue,
                   itemCount: controller.electronicsDetails.length,
                   productsDetails: controller.electronicsDetails),
-              const SizedBox(height: 10,),    
+              const SizedBox(
+                height: 10,
+              ),
               ProductsCard(
                   productsText: "Fashions:",
                   color: AppColors.ash,
                   itemCount: controller.fashionDetails.length,
                   productsDetails: controller.fashionDetails),
-              const SizedBox(height: 10,),       
-              ProductsCard(productsText: 'Grocery:',
-                   color: AppColors.lightgold, 
-                   itemCount: controller.groceryDetails.length,
-                   productsDetails: controller.groceryDetails), 
-              const SizedBox(height: 20,),           
+              const SizedBox(
+                height: 10,
+              ),
+              ProductsCard(
+                  productsText: 'Grocery:',
+                  color: AppColors.lightgold,
+                  itemCount: controller.groceryDetails.length,
+                  productsDetails: controller.groceryDetails),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
-        )
-        );
+        ));
   }
 }
