@@ -4,15 +4,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:vitamart/app/routes/app_pages.dart';
 
-class LoginController extends GetxController {
+class SignupController extends GetxController {
    final FirebaseAuth _auth = FirebaseAuth.instance;
- void userLogin(String email, String password) async {
+ void user(String email, String password) async {
     await _auth
-        .signInWithEmailAndPassword(email: email, password: password)
+        .createUserWithEmailAndPassword(email: email, password: password)
         .then((onValue) {
       Get.toNamed(Routes.LOGIN);
     }).catchError((onError) {
-      Get.snackbar('Error', 'Login Unsucessful');
+      Get.snackbar('error',"signup unsucessful");
     });
   }
 

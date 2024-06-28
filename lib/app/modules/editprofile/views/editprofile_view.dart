@@ -38,7 +38,7 @@ class EditprofileView extends GetView<EditprofileController> {
       body: SingleChildScrollView(
         child:
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Container(
+          SizedBox(
             // color: Colors.orange,
             height: 160,
             child: const Row(
