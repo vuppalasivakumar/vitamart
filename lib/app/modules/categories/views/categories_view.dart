@@ -18,6 +18,9 @@ class CategoriesView extends GetView<CategoriesController> {
         title: SizedBox(
           height: 50,
           child: TextField(
+             onChanged: (value) {
+              controller.updateSearchQuery(value);
+            },
             decoration: InputDecoration(
               labelText: 'Search here',
               enabledBorder: OutlineInputBorder(
@@ -38,51 +41,46 @@ class CategoriesView extends GetView<CategoriesController> {
           children: [
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                children: controller.categories.map((category) {
-                  final int index = controller.categories.indexOf(category);
-                  return InkWell(
-                    onTap: () {
-                      controller.currentIndex.value = index;
-                    },
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        SizedBox(
-                          width: 95,
-                          height: 50,
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: AppSizes.x0_50),
-                            child: Image.asset(category['catUrl']!),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0.0, 0.0, AppSizes.x1_75, 0),
+                child: Row(
+                  children: controller.categories.map((category) {
+                    final int index = controller.categories.indexOf(category);
+                    return InkWell(
+                      onTap: () {
+                        controller.currentIndex.value = index;
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            width: 95,
+                            height: 50,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: AppSizes.x0_50),
+                              child: Image.asset(category['catUrl']!),
+                            ),
                           ),
-                        ),
-                        Text(
-                          category["catName"] ?? "",
-                          style:Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.black
-                        )
-                        ),
-                      ],
-                    ),
-                  );
-                }).toList(),
+                          Text(
+                            category["catName"] ?? "",
+                            style:Theme.of(context).textTheme.titleMedium?.copyWith(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.black
+                          )
+                          ),
+                        ],
+                      ),
+                    );
+                  }).toList(),
+                ),
               ),
             ),
             Expanded(
-              child: controller.currentIndex.value == 0
-                  ? Products(
-                      itemlength: controller.fetchgroceyImageurls.length,
-                      productImages: controller.fetchgroceyImageurls,
-                    )
-                  : controller.currentIndex.value == 1
-                            ?  Products(itemlength: controller.fetchelectronicsImageurls.length, productImages: controller.fetchelectronicsImageurls)
-                            : controller.currentIndex.value == 2
-                                ?  Products(itemlength: controller.fetchFashionImageurls.length, productImages: controller.fetchFashionImageurls)
-                        :   Products(itemlength: controller.fetchFurnitureImageurls.length, productImages: controller.fetchFurnitureImageurls)
-                       
-                    
+              child: Products(
+                itemlength: controller.filteredProducts.length,
+                productImages: controller.filteredProducts,
+              ),
             ),
           ],
         ),

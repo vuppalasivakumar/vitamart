@@ -19,6 +19,9 @@ class CategoriesController extends GetxController {
   ].obs;
   
   var currentIndex = 0.obs;
+
+  var searchQuery = ''.obs;
+
   var fetchgroceyImageurls = <Map<String, String>>[
     {
       'name': 'Tata Dal',
@@ -351,4 +354,29 @@ class CategoriesController extends GetxController {
       'discount': '67',   
     },
   ].obs;
+
+   List<Map<String, String>> get filteredProducts {
+    var products = currentIndex.value == 0
+        ? fetchgroceyImageurls
+        : currentIndex.value == 1
+            ? fetchelectronicsImageurls
+            : currentIndex.value == 2
+                ? fetchFashionImageurls
+                : fetchFurnitureImageurls;
+
+    if (searchQuery.value.isEmpty) {
+      return products;
+    } else {
+      return products
+          .where((product) => product['name']
+              ?.toLowerCase()
+              .contains(searchQuery.value.toLowerCase()) ??
+              false)
+          .toList();
+    }
+  }
+
+  void updateSearchQuery(String query) {
+    searchQuery.value = query;
+  }
 }
