@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 
 import 'package:vitamart/app/modules/account/bindings/account_binding.dart';
@@ -18,8 +20,8 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  // ignore: constant_identifier_names
-  static const INITIAL = Routes.ACCOUNT;
+  
+  static const INITIAL = Routes.USERPROFILE;
 
   static final routes = [
     GetPage(

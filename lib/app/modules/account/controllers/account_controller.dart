@@ -1,7 +1,5 @@
-// ignore_for_file: unnecessary_overrides
+
 
 import 'package:get/get.dart';
 
-class AccountController extends GetxController {
-  
-}
+class AccountController extends GetxController {}

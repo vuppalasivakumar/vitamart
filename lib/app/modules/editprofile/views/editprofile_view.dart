@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
+import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
+import 'package:vitamart/app/core/app_configurations/app_urls.dart';
 
 import '../controllers/editprofile_controller.dart';
 
@@ -11,168 +13,196 @@ class EditprofileView extends GetView<EditprofileController> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
-        appBar: AppBar(
-          title: TextField(
-            decoration: InputDecoration(
-                suffixIcon: Row(
+      appBar: AppBar(
+        title: TextField(
+          decoration: InputDecoration(
+            suffixIcon: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.search_outlined)),
+                  onPressed: () {},
+                  icon: const Icon(Icons.search_outlined),
+                ),
                 IconButton(
-                    onPressed: () {},
-                    icon: const FaIcon(FontAwesomeIcons.cartShopping))
+                  onPressed: () {},
+                  icon: const FaIcon(FontAwesomeIcons.cartShopping),
+                ),
               ],
-            )),
+            ),
           ),
         ),
-        body: Stack(
-          children: [
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [AppColors.lightblue, AppColors.balck])),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(top: 50),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircleAvatar(
-                    maxRadius: 50,
-                    backgroundImage: NetworkImage(
-                        "https://img.freepik.com/premium-photo/3d-animation-character-cartoon_113255-10754.jpg?w=740"),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "or",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  CircleAvatar(
-                    maxRadius: 50,
-                    backgroundImage: NetworkImage(
-                        "https://img.freepik.com/premium-photo/3d-avatar-character_113255-31681.jpg?size=626&ext=jpg"),
-                  )
-                ],
+      ),
+      body: Stack(
+        children: [
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [AppColors.lightblue, AppColors.balck],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 200),
-              child: Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40)),
-                  color: AppColors.whitecolor,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: AppSizes.x6_25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const CircleAvatar(
+                  maxRadius: 50,
+                  backgroundImage: NetworkImage(Appurl.profileboy),
                 ),
-                height: double.infinity,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 18.0, right: 18),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const TextField(
-                        decoration: InputDecoration(
-                            label: Text(
+                const SizedBox(
+                  width: 20,
+                ),
+                Text(
+                  "or",
+                  style: textTheme.titleSmall!
+                      .copyWith(color: AppColors.whitecolor),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                const CircleAvatar(
+                  maxRadius: 50,
+                  backgroundImage: NetworkImage(Appurl.profilegirl),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: AppSizes.x25_00),
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                ),
+                color: AppColors.whitecolor,
+              ),
+              height: double.infinity,
+              width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: AppSizes.x2_25, right: AppSizes.x2_25),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        label: Text(
                           "First Name",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.lightblue),
-                        )),
+                          style: textTheme.titleSmall!.copyWith(
+                              color: AppColors.lightblue,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      const TextField(
-                        decoration: InputDecoration(
-                            label: Text(
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        label: Text(
                           "Last Name",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.lightblue),
-                        )),
+                          style: textTheme.titleSmall!.copyWith(
+                              color: AppColors.lightblue,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      Container(
-                        height: 55,
-                        width: 300,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          gradient: const LinearGradient(colors: [
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Container(
+                      height: 55,
+                      width: 300,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        gradient: const LinearGradient(
+                          colors: [
                             AppColors.lightblue,
                             AppColors.balck,
-                          ]),
+                          ],
                         ),
-                        child: OutlinedButton(
-                          onPressed: () {},
-                          child: const Center(
-                            child: Text(
-                              'Submit',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: AppColors.whitecolor),
+                      ),
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        child: Center(
+                          child: Text(
+                            'Submit',
+                            style: textTheme.titleSmall!.copyWith(
+                              color: AppColors.whitecolor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
                             ),
                           ),
                         ),
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: TextButton(
-                                onPressed: () {}, child: const Text("Update")),
-                            label: const Text(
-                              "Mobile Number",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.lightblue),
-                            )),
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: TextButton(
-                                onPressed: () {}, child: const Text("Update")),
-                            label: const Text(
-                              "Email ID",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.lightblue),
-                            )),
-                      ),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      const Divider(
-                        height: 10,
-                      ),
-                      TextButton(
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        suffixIcon: TextButton(
                           onPressed: () {},
-                          child: const Text(
-                            "Deactivate Account",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          )),
-                      const Divider(
-                        height: 10,
+                          child: const Text("Update"),
+                        ),
+                        label: Text(
+                          "Mobile Number",
+                          style: textTheme.titleSmall!.copyWith(
+                            color: AppColors.lightblue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                      TextButton(
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        suffixIcon: TextButton(
                           onPressed: () {},
-                          child: const Text(
-                            "Delete Account",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          )),
-                    ],
-                  ),
+                          child: const Text("Update"),
+                        ),
+                        label: Text(
+                          "Email ID",
+                          style: textTheme.titleSmall!.copyWith(
+                            color: AppColors.lightblue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    const Divider(
+                      height: 10,
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Deactivate Account",
+                        style: textTheme.titleSmall!.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlue),
+                      ),
+                    ),
+                    const Divider(
+                      height: 10,
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Delete Account",
+                        style: textTheme.titleSmall!.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlue),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            )
-          ],
-        ));
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

@@ -11,6 +11,7 @@ class AdressfieldsView extends GetView<AdressfieldsController> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.blueColor,
@@ -28,104 +29,117 @@ class AdressfieldsView extends GetView<AdressfieldsController> {
               Icons.search_outlined,
             ),
             style: const ButtonStyle(
-                iconColor: MaterialStatePropertyAll(AppColors.whitecolor),),
+              iconColor: MaterialStatePropertyAll(AppColors.whitecolor),
+            ),
           ),
           IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.shopping_cart_outlined),
-              style: const ButtonStyle(
-                  iconColor: MaterialStatePropertyAll(AppColors.whitecolor),),),
+            onPressed: () {},
+            icon: const Icon(Icons.shopping_cart_outlined),
+            style: const ButtonStyle(
+              iconColor: MaterialStatePropertyAll(AppColors.whitecolor),
+            ),
+          ),
         ],
       ),
-      body:
-       SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 20,),
-            
+            const SizedBox(
+              height: 20,
+            ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: AppSizes.x2_50),
               child: TextField(
-                
                 decoration: InputDecoration(
-                 
-                  labelText:"Full Name", 
+                  labelText: "Full Name",
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-            
-            const SizedBox(height: 20,),
-             const Padding(
+            const SizedBox(
+              height: 20,
+            ),
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: AppSizes.x2_50),
               child: TextField(
-                
                 decoration: InputDecoration(
-                 
-                  labelText:"Phone Number", 
+                  labelText: "Phone Number",
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-        const SizedBox(height: 20,),
-             const Padding(
+            const SizedBox(
+              height: 20,
+            ),
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: AppSizes.x2_50),
               child: TextField(
-                
                 decoration: InputDecoration(
-                 
-                  labelText:"House No", 
+                  labelText: "House No",
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-        
-             const SizedBox(height: 20,),
-             const Padding(
+            const SizedBox(
+              height: 20,
+            ),
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: AppSizes.x2_50),
               child: TextField(
-                
                 decoration: InputDecoration(
-                 
-                  labelText:"Road name,Area", 
+                  labelText: "Road name,Area",
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-            const SizedBox(height: 20,),
-           const Padding(
-             padding: EdgeInsets.all(AppSizes.x2_50),
-             child: Row(
-              children: [
-                
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      labelText: "PinCode",
-                      border: OutlineInputBorder(),
+            const SizedBox(
+              height: 20,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(AppSizes.x2_50),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "PinCode",
+                        border: OutlineInputBorder(),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(width: 20,),
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      labelText: "City",
-                      border: OutlineInputBorder(),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "City",
+                        border: OutlineInputBorder(),
+                      ),
                     ),
                   ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: 300,
+              child: OutlinedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    shape: const BeveledRectangleBorder(
+                        borderRadius: BorderRadius.zero),
+                    backgroundColor: AppColors.blueColor),
+                child: Text(
+                  "Save Address",
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: AppColors.whitecolor, fontWeight: FontWeight.bold),
                 ),
-              ],
-             ),
-           ),
-           const SizedBox(height: 30),
-           SizedBox(
-            width: 300,
-            child: OutlinedButton(onPressed: (){},style: ElevatedButton.styleFrom(shape:const  BeveledRectangleBorder(borderRadius: BorderRadius.zero),backgroundColor: AppColors.blueColor), child: const Text("Save Address",style: TextStyle(color: AppColors.whitecolor,fontWeight: FontWeight.bold),),),),
+              ),
+            ),
           ],
         ),
       ),
-      
     );
   }
 }

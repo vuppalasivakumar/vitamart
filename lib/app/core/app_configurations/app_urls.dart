@@ -24,4 +24,8 @@ class Appurl {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIASh-j0mkEkMCjQTq5ojGuu11sd9Gkh4t5g&s";
   static const card2 =
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCNnjMLAOJOfvGIa59CCLASk0q_SfP4EMQXQ&s";
+  static const profileboy =
+      "https://img.freepik.com/premium-photo/3d-animation-character-cartoon_113255-10754.jpg?w=740";
+  static const profilegirl =
+      "https://img.freepik.com/premium-photo/3d-avatar-character_113255-31681.jpg?size=626&ext=jpg";
 }

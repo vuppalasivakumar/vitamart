@@ -11,6 +11,7 @@ class AddressView extends GetView<AddressController> {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       extendBodyBehindAppBar: true,
       extendBody: true,
@@ -44,12 +45,13 @@ class AddressView extends GetView<AddressController> {
       ),
       body: const Column(),
       floatingActionButton: FloatingActionButton(
-          shape:
-              BeveledRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          onPressed: () {
-            Get.to(() => const AdressfieldsView());
-          },
-          child: const Text("+")),
+        onPressed: () {
+          Get.to(
+            () => const AdressfieldsView(),
+          );
+        },
+        child: const Text("+"),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
