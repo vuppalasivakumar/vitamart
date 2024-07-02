@@ -1,4 +1,4 @@
-class AppNetworkurls{
+class AppNetworkurls {
   static const carouselMobileimg =
       "https://img.freepik.com/free-psd/gradient-sales-template-design_23-2151082131.jpg";
   static const carouselmobilesaleimg =
@@ -10,5 +10,5 @@ class AppNetworkurls{
   static const mobileimg =
       "https://www.livemint.com/lm-img/img/2023/10/09/600x338/top_mobiles_1696843994490_1696844009797.jpg";
   static const ordernow =
-      "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmhsM212cGRvYTVicjA4MGU1MDR4bjc5d28yYzd6YzdhNzFwd2R1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EI386ETxYqjQaFGXAz/giphy.webp";  
+      "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmhsM212cGRvYTVicjA4MGU1MDR4bjc5d28yYzd6YzdhNzFwd2R1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EI386ETxYqjQaFGXAz/giphy.webp";
 }

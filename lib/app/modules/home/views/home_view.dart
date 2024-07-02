@@ -8,6 +8,7 @@ import 'package:vitamart/app/core/app_configurations/app_colors.dart';
 import 'package:vitamart/app/core/app_configurations/app_networkurls.dart';
 import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
 import 'package:vitamart/app/modules/home/widgets/products_card.dart';
+import 'package:vitamart/app/modules/home/widgets/productsscrollbar.dart';
 import 'package:vitamart/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
@@ -19,12 +20,13 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     // final colorScheme = Theme.of(context).colorScheme;
     // final textTheme = Theme.of(context).textTheme;
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.whitecolor,
-          toolbarHeight: 100,
-          // elevation: 6,
-          leadingWidth: 110,
+          toolbarHeight: height / 10,
+          leadingWidth: width / 4,
           leading: Padding(
             padding: const EdgeInsets.only(left: AppSizes.x0_75),
             child: Image.asset(
@@ -42,7 +44,6 @@ class HomeView extends GetView<HomeController> {
               hintText: 'Enter here',
             ),
           ),
-          // const CupertinoSearchTextField(),
           actions: [
             IconButton(
               icon: const Icon(
@@ -50,7 +51,6 @@ class HomeView extends GetView<HomeController> {
               ),
               iconSize: 35,
               onPressed: () {
-                Get.toNamed(Routes.CART);
               },
               tooltip: "Login here",
             ),
@@ -195,42 +195,47 @@ class HomeView extends GetView<HomeController> {
                               scrollDirection: Axis.horizontal,
                               itemCount: controller.menuItems.length,
                               itemBuilder: (context, index) {
-                                return Container(
-                                  width: 120,
-                                  margin: const EdgeInsets.symmetric(
-                                      horizontal: AppSizes.x1_00),
-                                  child: Column(
-                                    children: [
-                                      Expanded(
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              image: NetworkImage(
-                                                  controller.menuItems[index]
-                                                      ['imageUrl']!),
-                                              fit: BoxFit.cover,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(height: 8),
-                                      Text(
-                                        controller.menuItems[index]["title"]!,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleMedium
-                                            ?.copyWith(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                        textAlign: TextAlign.center,
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ],
-                                  ),
+                                return ProductScrollBar(
+                                  imageUrl: controller.menuItems[index]
+                                      ['imageUrl']!,
+                                  title: controller.menuItems[index]['title']!,
                                 );
+                                //  Container(
+                                //   width: 120,
+                                //   margin: const EdgeInsets.symmetric(
+                                //       horizontal: AppSizes.x1_00),
+                                //   child: Column(
+                                //     children: [
+                                //       Expanded(
+                                //         child: Container(
+                                //           decoration: BoxDecoration(
+                                //             image: DecorationImage(
+                                //               image: NetworkImage(
+                                //                   controller.menuItems[index]
+                                //                       ['imageUrl']!),
+                                //               fit: BoxFit.cover,
+                                //             ),
+                                //             borderRadius:
+                                //                 BorderRadius.circular(8),
+                                //           ),
+                                //         ),
+                                //       ),
+                                //       const SizedBox(height: 8),
+                                //       Text(
+                                //         controller.menuItems[index]["title"]!,
+                                //         style: Theme.of(context)
+                                //             .textTheme
+                                //             .titleMedium
+                                //             ?.copyWith(
+                                //               fontWeight: FontWeight.bold,
+                                //             ),
+                                //         textAlign: TextAlign.center,
+                                //         maxLines: 2,
+                                //         overflow: TextOverflow.ellipsis,
+                                //       ),
+                                //     ],
+                                //   ),
+                                // );
                               },
                             ),
                           ),

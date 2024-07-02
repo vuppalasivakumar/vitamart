@@ -3,5 +3,5 @@ class AppAssets {
   static const vitamartLogo = "assets/vitamart_logo.jpg";
   static const vitamartProductsimg = "assets/vitamart_productsimg.jpg";
   static const bannerlogo = "assets/banner_logo.png";
-  static const diwali ="assets/diwali.png";
+  static const diwali = "assets/diwali.png";
 }

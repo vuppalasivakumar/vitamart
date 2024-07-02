@@ -19,7 +19,6 @@ class ProductsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        // color: AppColors.lightblue,
         padding: EdgeInsets.zero,
         margin: EdgeInsets.zero,
         color: color,
@@ -48,7 +47,6 @@ class ProductsCard extends StatelessWidget {
                 final product = productsDetails[index];
                 return Card(
                   child: ListTile(
-                    // contentPadding: const EdgeInsets.all(AppSizes.x0_50),
                     title: Image.network(
                       product["prdUrl"] ?? "N/A",
                       width: 100,
@@ -56,7 +54,7 @@ class ProductsCard extends StatelessWidget {
                     ),
 
                     subtitle: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      padding: const EdgeInsets.symmetric(vertical: AppSizes.x2_25),
                       child: Column(children: [
                         Text(product["prdName"] ?? "N/A"),
                         Text(product["prdPrice"] ?? "N/A")
