@@ -1,7 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_assets.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
@@ -9,8 +7,6 @@ import 'package:vitamart/app/core/app_configurations/app_networkurls.dart';
 import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
 import 'package:vitamart/app/modules/home/widgets/products_card.dart';
 import 'package:vitamart/app/modules/home/widgets/productsscrollbar.dart';
-import 'package:vitamart/app/routes/app_pages.dart';
-
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -18,8 +14,6 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    // final colorScheme = Theme.of(context).colorScheme;
-    // final textTheme = Theme.of(context).textTheme;
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -50,8 +44,7 @@ class HomeView extends GetView<HomeController> {
                 Icons.person_outline_rounded,
               ),
               iconSize: 35,
-              onPressed: () {
-              },
+              onPressed: () {},
               tooltip: "Login here",
             ),
             const SizedBox(
