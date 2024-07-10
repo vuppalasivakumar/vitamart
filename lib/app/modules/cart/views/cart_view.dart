@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
@@ -14,7 +16,7 @@ class CartView extends GetView<CartController> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: colorScheme.primary,
+        backgroundColor: AppColors.appcolor,
         elevation: 6,
         title: Text(
           'Your Cart',
@@ -166,6 +168,12 @@ class CartView extends GetView<CartController> {
                                   TextButton(
                                     onPressed: () {
                                       controller.removeProduct(product);
+                                      Get.snackbar(
+                                          'Product', 'product removed successfully!',
+                                          backgroundColor: AppColors.whitecolor,
+                                          colorText: AppColors.appcolor,
+                                          borderWidth: AppSizes.x0_25,
+                                          borderColor: AppColors.balck);
                                     },
                                     child: const Text(
                                       'REMOVE',
@@ -210,11 +218,15 @@ class CartView extends GetView<CartController> {
                     horizontal: AppSizes.x2_00, vertical: AppSizes.x2_00),
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.snackbar('Order', 'Order placed successfully!');
+                    Get.snackbar('Order', 'Order placed successfully!',
+                        backgroundColor: AppColors.whitecolor,
+                        colorText: AppColors.appcolor,
+                        borderWidth: AppSizes.x0_25,
+                        borderColor: AppColors.balck);
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(double.infinity, AppSizes.x3_25),
-                    backgroundColor: colorScheme.primary,
+                    backgroundColor: AppColors.appcolor,
                   ),
                   child: const Text(
                     'Place Order',

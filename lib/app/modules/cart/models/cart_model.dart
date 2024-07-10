@@ -29,8 +29,5 @@ class Product {
     );
   }
 
-  @override
-  String toString() {
-    return 'Product{id: $id, image: $image, title: $title, price: $price}';
-  }
+
 }
