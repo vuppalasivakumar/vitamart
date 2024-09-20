@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
+import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -25,7 +26,7 @@ class LoginView extends GetView<LoginController> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              SizedBox(height: 20,),
+              SizedBox(height: AppSizes.x1_50,),
               Image.asset("assets/vitamart_title_logo.png"),
               Image.asset(
                 "assets/loginimg.jpg",
@@ -39,12 +40,12 @@ class LoginView extends GetView<LoginController> {
                     ?.copyWith(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               const SizedBox(
-                height: 10,
+                height: AppSizes.x0_25,
                 width: 5,
               ),
               const Text('Enter your Email&Password to continue'),
               const SizedBox(
-                height: 20,
+                height: AppSizes.x1_50,
               ),
               
               TextField(
@@ -60,7 +61,7 @@ class LoginView extends GetView<LoginController> {
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: AppSizes.x1_50,),
               TextField(
                 controller: password,
                 keyboardType: TextInputType.text,
@@ -74,7 +75,7 @@ class LoginView extends GetView<LoginController> {
                       ?.copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppSizes.x1_50),
               const Text('By Continuing , you agree to Vitamart'),
               TextButton(
                   onPressed: () {},

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
+import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
 // import 'package:vitamart/app/modules/login/controllers/login_controller.dart';
 import 'package:vitamart/app/routes/app_pages.dart';
 
@@ -11,8 +12,6 @@ import '../controllers/signup_controller.dart';
 
 class SignupView extends GetView<SignupController> {
   // final TextEditingController _UsernameController = TextEditingController();
-  final TextEditingController email = TextEditingController();
-  final TextEditingController password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class SignupView extends GetView<SignupController> {
                 width: 180,
               ),
               const SizedBox(
-                height: 20,
+                height: AppSizes.x1_75,
               ),
               Text(
                 "Sign up to Continue",
@@ -41,10 +40,13 @@ class SignupView extends GetView<SignupController> {
                     ?.copyWith(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               const SizedBox(
-                height: 40,
+                height: AppSizes.x2_00,
               ),
               TextField(
-                controller: email,
+                onChanged: (email) {
+                  controller.email.text = email;
+                },
+                controller: controller.email,
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   prefixIcon: const Icon(Icons.email),
@@ -58,20 +60,21 @@ class SignupView extends GetView<SignupController> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: AppSizes.x1_75,
               ),
               TextField(
-                controller: password,
+                onChanged: (password) {
+                  controller.password.text = password;
+                },
+                controller: controller.password,
                 keyboardType: TextInputType.text,
-         obscureText: true,
+                obscureText: true,
                 decoration: InputDecoration(
                   prefixIcon: const Icon(Icons.remove_red_eye_outlined),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30)),
                   labelText: "enter your password",
                   hintText: "******",
-                  
-                  
                   labelStyle: Theme.of(context)
                       .textTheme
                       .titleSmall
@@ -79,11 +82,15 @@ class SignupView extends GetView<SignupController> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: AppSizes.x1_50,
               ),
               ElevatedButton(
                   onPressed: () {
-                    controller.user(email.text, password.text);
+                    // controller.user(email.text, password.text);
+                    controller.user(
+                        controller.email.text, controller.password.text);
+                    controller.writeData(
+                        controller.email.text, controller.password.text);
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.orange),
@@ -93,7 +100,7 @@ class SignupView extends GetView<SignupController> {
                         color: AppColors.naviblue, fontWeight: FontWeight.bold),
                   )),
               const SizedBox(
-                height: 20,
+                height: AppSizes.x1_50,
               ),
               Text(
                 "Already You Have account?",
@@ -102,20 +109,16 @@ class SignupView extends GetView<SignupController> {
               ),
               TextButton(
                   onPressed: () {
+                    controller.writeData(
+                        controller.email.text, controller.password.text);
                     Get.toNamed(Routes.LOGIN);
                   },
-                  child: Text(
-                    "Login",
-                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.naviblue,
-                      fontFamily: 'Mukta',
-                      fontSize: 17
-                     
-
-                      
-                    )
-                  ))
+                  child: Text("Login",
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.naviblue,
+                          fontFamily: 'Mukta',
+                          fontSize: 17)))
             ],
           ),
         ),

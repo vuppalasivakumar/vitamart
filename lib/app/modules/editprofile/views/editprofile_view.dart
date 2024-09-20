@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:vitamart/app/core/app_configurations/app_colors.dart';
+import 'package:vitamart/app/core/app_configurations/app_sizes.dart';
 
 import '../controllers/editprofile_controller.dart';
 
@@ -129,7 +130,7 @@ class EditprofileView extends GetView<EditprofileController> {
             height: 40,
           ),
           const Divider(
-            height: 10,
+            height: AppSizes.x1_25,
           ),
           TextButton(
               onPressed: () {},
