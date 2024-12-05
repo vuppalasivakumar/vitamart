@@ -10,17 +10,18 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  // ignore: constant_identifier_names
+  static const INITIAL = Routes.CART;
 
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.CART,
-      page: () => CartView(),
+      page: () => const CartView(),
       binding: CartBinding(),
     ),
   ];
