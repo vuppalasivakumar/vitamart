@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "953422437745",
+    "firebase_url": "https://vitamart-55f23-default-rtdb.firebaseio.com",
+    "project_id": "vitamart-55f23",
+    "storage_bucket": "vitamart-55f23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953422437745:android:71dfbe3d05ee5eeaa86ad0",
+        "android_client_info": {
+          "package_name": "com.vita.vitamart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJOiGUrZAmHrzoma-Dv0FNo6sfWnX0uG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
